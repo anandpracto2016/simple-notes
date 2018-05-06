@@ -1,0 +1,68 @@
+// Usage:
+// <div class="media">
+//   <a class="media-left" href="#">
+//     <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
+//   </a>
+  // <div class="media-body">
+  //   <h4 class="media-heading">Media heading</h4>
+  //     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+  // </div>
+// </div>
+
+.o-media {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+}
+
+.o-media,
+.o-media-body {
+  overflow: auto;
+  zoom: 1;
+}
+
+.o-media-body {
+  width: 10000px;
+  overflow: hidden;
+}
+
+.o-media--left,
+.o-media--right,
+.o-media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.o-media--middle {
+  vertical-align: middle;
+}
+
+.o-media--bottom {
+  vertical-align: bottom;
+}
+
+
+//
+// Images/elements as the media anchor
+//
+.o-media-object {
+  display: block;
+  // width: 100px;
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  &.img-thumbnail {
+    max-width: none;
+  }
+}
+
+
+//
+// Alignment
+//
+// .o-media-right {
+//   padding-left: 10px;
+// }
+
+// .o-media-left {
+//   padding-right: 10px;
+// }

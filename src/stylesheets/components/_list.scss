@@ -1,0 +1,8 @@
+.c-list-wrapper {
+  @extend .u-border-grey-1--right;
+  @extend .u-vh;
+  width: 318px;
+  background-color: #f7f7fa;
+  min-width: 180px;
+  border-right: 1px solid #aaa;
+}

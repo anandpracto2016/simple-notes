@@ -1,0 +1,37 @@
+o-media-body o-media--right {
+	overflow: hidden;
+}
+
+.show-note {
+	width: 1000px;
+	margin: 20px;
+	.title-block {
+		display: flex;
+	}
+	.title-head {
+		font-weight: bold;
+	}
+	.title {
+
+	}
+	.content-block {
+		margin-bottom: 20px;
+	}
+	.content {
+		min-weight: 400px;
+		min-height: 250px;
+		width: 100%;
+		height: 50%;
+		overflow: auto;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		padding: 20px;
+		margin-left: 20px;
+	}
+	.edit-btn-block {
+		text-align: right;
+		.edit-btn {
+
+		}
+	}
+}

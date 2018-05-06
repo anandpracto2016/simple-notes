@@ -1,0 +1,126 @@
+$header-height: 75px;
+$mheader-height: 50px;
+
+//stop scrolling of background layout
+.ReactModalPortal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.c-modal {
+
+  &--header {
+    @extend .u-cushion--medium;
+    height: $header-height;
+    line-height: $header-height;
+    border-bottom: 1px solid $grey_2;
+
+    &__left {
+      @extend .u-base-font;
+      width: 70%;
+      float: left;
+    }
+
+    &__right {
+      @extend .u-extra-large-font, .u-cursor-pointer;
+      @extend .u-spacer--right;
+    }
+  }
+
+  &--right {
+    &__Overlay {
+      &--after-open {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 100;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.75);
+      }
+    }
+
+    &__Content {
+      right: -100%;
+      &--after-open {
+        transition: 0.2s;
+        position: absolute;
+        border: 1px solid $grey_2;
+        top: 60px;
+        height: 100%;
+        right: 0;
+        background: rgb(255, 255, 255);
+        overflow: auto;
+        outline: none;
+      }
+    }
+  }
+
+  &--center {
+    &__Overlay {
+      &--after-open {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 100;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: auto;
+      }
+    }
+
+    &__Content {
+      &--after-open {
+        @extend  .u-round-corner;
+        // position: absolute;
+        width: 50%;
+        min-width: 400px;
+        max-width: 800px;
+        margin: auto;
+        margin-top: 5%;
+        padding: 20px;
+        top: 10%;
+        // top: 50%;
+        // left: 50%;
+        // margin-right: -50%;
+        // right: auto;
+        // bottom: auto;
+        background: rgb(255, 255, 255);
+        overflow: auto;
+        // outline: none;
+        // transform: translate(-30%, -50%);
+      }
+    }
+  }
+}
+
+.modal-body {
+  width: 320px;
+}
+
+.list-modal {
+  &--header {
+    @extend .u-border-grey-1--bottom;
+    padding: 10px 15px;
+  }
+  &--body {
+    @extend .u-cushion--medium-horizontal;
+    max-height: 238px;
+    overflow: scroll;
+  }
+  &--footer {
+    @extend .u-border-grey-1--top;
+    @extend .u-text-align--right;
+    padding: 10px 15px;
+  }
+  &--error {
+    @extend .u-border-grey-1--top;
+    padding: 10px 15px;
+  }
+}
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}

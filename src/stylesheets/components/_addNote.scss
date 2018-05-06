@@ -1,0 +1,42 @@
+.add-note, .edit-note {
+	input {
+		border-radius: 5px;
+		border: 1px solid #a7a7a7;		
+		padding: 5px;
+	}
+	.title {
+		margin-bottom: 20px;
+		width: 100%;
+		border-radius: 5px;
+	}
+	.content {
+		width: 100%;
+		min-height: 200px;
+		height: 30%;
+		overflow: auto;
+		border: 1px solid #a7a7a7;
+		padding: 5px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+	.image-block {
+		margin-bottom: 20px;
+		width: 100%;
+		border-radius: 5px;
+		.image {
+			width: calc(100% - 110px);
+			margin-right: 10px;
+		}
+		button {
+			width: 100px;
+			height: 25px;
+		}
+	}
+	.save-btn {
+		text-align: right;
+		button {
+			width: 150px;
+			height: 35px;
+		}
+	}
+}

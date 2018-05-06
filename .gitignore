@@ -1,0 +1,9 @@
+build/*
+node_modules/*
+.DS_Store
+._.DS_Store
+package-lock.json
+config/secrets.js
+coverage/*
+npm-debug.log.*
+npm-debug.log

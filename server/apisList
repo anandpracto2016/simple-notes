@@ -1,0 +1,81 @@
+Nanonets
+
+APIs
+
+1. getNotesAndFolders: [GET] userID from URL
+{
+  notes: [
+    {
+      id,
+      title,
+      content,
+      folder_id
+    }
+  ],
+  folders: [
+    {
+      id,
+      name,
+      notes: []
+    }
+  ]
+}
+
+2. createNote: [POST]
+{
+  title,
+  content,
+  folder_id
+}
+
+3. createFolder: [POST]
+{
+  name
+}
+
+
+4. deleteNote: [POST]
+{
+  id
+}
+
+5. deleteFolder: [POST]
+{
+  id
+}
+
+6. updateNote: [PATCH]
+{
+  id,
+  key,
+  value
+}
+
+7. updateFolder: [PATCH]
+{
+  id,
+  key,
+  value
+}
+
+8. login: [POST]
+{
+  username,
+  password
+}
+
+9. getNoteDetails: [GET]
+/:userID/:noteID
+
+{
+  id,
+  title,
+  content
+}
+
+10. getFolderDetails: [GET]
+/:userID/:folderId
+{
+  name,
+  all notes
+}

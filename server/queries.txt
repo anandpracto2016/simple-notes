@@ -1,0 +1,15 @@
+[getNotesAndFolders]:
+
+Orphan notes:
+Select * from notes where folder_id is null AND id in (Select note_id from user_notes where user_id=?);
+
+Folders:
+Select * from folders where id in (Select folder_id from user_folders where user_id=?);
+
+Create Note:
+Insert into notes(folder_id, url, created_at, updated_at, title, content) values(?, ?, ?, ?, ?, ?)
+insert into user_notes(user_id, note_id) values(?, ?)
+
+Create Folder:
+Insert into folders(name, created_at, updated_at) values(?, ?, ?)
+Insert into user_folders(user_id, folder_id) values(?, ?)

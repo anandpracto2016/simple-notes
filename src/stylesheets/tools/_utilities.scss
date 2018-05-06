@@ -1,0 +1,576 @@
+.u-bold {
+  font-weight: 700;
+}
+
+.u-small-font {
+  font-size: $small-font;
+}
+.u-font-16 {
+  font-size: $font-16;
+}
+.u-tiny-font {
+  font-size: $tiny-font;
+}
+.u-medium-font {
+  font-size: $medium-size;
+}
+.u-font-20 {
+  font-size: $font-20;
+}
+.u-base-font {
+  font-size: $base-font;
+}
+.u-extra-large-font {
+  font-size: $extra-large-font;
+}
+.u-jumbo-font {
+  font-size: $jumbo-font;
+}
+
+.u-text-align {
+  &--right {
+    text-align: right;
+    text-align: -webkit-right;
+    text-align: -moz-right;
+    text-align: -o-right;
+    text-align: -ms-right;
+  }
+  &--left {
+    text-align: left;
+  }
+}
+
+.u-t-color {
+  &--green {
+    color: $green;
+  }
+  &--orange {
+    color: $orange;
+  }
+  &--danger {
+    color: $danger;
+  }
+}
+
+.u-vh {
+  height: 100%;
+}
+
+.u-icon {
+  position: absolute;
+  margin: auto;
+  height: 16px;
+  width: 25px;
+  bottom: 0;
+  top: 0;
+}
+
+.u-icon--left {
+  @extend .u-icon;
+  left: 0;
+}
+
+.u-icon--right {
+  @extend .u-icon;
+  right: 0;
+}
+
+// display
+
+.u-d-inline-block {
+  display: inline-block;
+}
+
+.u-d-none {
+  display: none;
+}
+
+.u-d-table {
+  display: table;
+  table-layout: fixed;
+}
+
+.u-d-table-caption {
+  display: table-caption;
+}
+
+// position
+
+.u-p-absolute {
+  position: absolute;
+}
+
+//vertical align
+
+.u-valign {
+  &-middle {
+    vertical-align: middle;
+    // vertical-align: -webkit-baseline-middle;
+  }
+  &-top {
+    vertical-align: top;
+    vertical-align: -webkit-baseline-top;
+  }
+  &-bottom {
+    vertical-align: bottom;
+    vertical-align: -webkit-baseline-bottom;
+  }
+}
+
+.u-clearfix {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  *zoom: 1;
+
+  &:after {
+    clear: both;
+  }
+
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+}
+
+//floats
+
+.u-float {
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    float: right;
+  }
+
+  &--clear {
+    clear: both;
+  }
+}
+
+
+// padding utilities
+
+
+.u-cushion {
+  // Adds a standard padding of 10px on both sides
+  padding: 0 10px;
+  &--all {
+    padding: 10px;
+  }
+  &--vertical {
+    padding: 10px 0;
+    &-thin {
+      padding: 5px 0;
+    }
+  }
+  &--horizontal {
+    padding: 0px 10px;
+  }
+  &--rectangle {
+    padding: 10px 20px;
+  }
+  &--top {
+    padding-top: 10px;
+  }
+  &--right {
+    padding-right: 10px;
+  }
+  &--bottom {
+    padding-bottom: 10px;
+  }
+  &--left {
+    padding-left: 10px;
+    &-thin {
+      padding-left: 5px;
+    }
+  }
+
+  &--small {
+    padding: 0 8px;
+    &-all {
+      padding: 8px;
+    }
+    &-vertical {
+      padding: 8px 0;
+    }
+    &-horizontal {
+      padding: 0 8px;
+    }
+    &-top {
+      padding-top: 8px;
+    }
+    &-right {
+      padding-right: 8px;
+    }
+    &-bottom {
+      padding-bottom: 8px;
+    }
+    &-left {
+      padding-left: 8px;
+    }
+  }
+
+  &--medium {
+    padding: 0 15px;
+
+    &-vertical {
+      padding: 15px 0;
+    }
+
+    &-horizontal {
+      padding: 0 15px;
+    }
+
+    &-top {
+      padding-top: 15px;
+    }
+
+    &-all {
+      padding: 15px;
+    }
+
+    &-left {
+      padding-left: 15px;
+    }
+  }
+
+  &--large {
+    padding: 0 20px;
+
+    &-all {
+      padding: 20px;
+    }
+
+    &-vertical {
+      padding: 20px 0;
+    }
+
+    &-horizontal {
+      padding: 0 20px;
+    }
+
+    &-top {
+      padding-top: 20px;
+    }
+
+    &-bottom {
+      padding-bottom: 20px;
+    }
+
+    &-left {
+      padding-left: 20px;
+    }
+
+    &-right {
+      padding-right: 20px;
+    }
+  }
+
+  &--thin {
+    &-all {
+      padding: 3px;
+    }
+    &-left {
+      padding-left: 3px;
+    }
+    &-horizontal {
+      padding: 0 3px;
+    }
+    &-bottom {
+      padding-bottom: 3px;
+    }
+  }
+}
+
+
+// margin utilities
+.u-spacer {
+  // Adds a standard margin of 10px on both sides
+  margin: 0 10px;
+  &--all {
+    margin: 10px;
+  }
+
+  &--horizontal {
+    margin: 0 10px;
+    &-thin {
+      margin: 0 5px;
+    }
+  }
+
+  &--vertical {
+    margin: 10px 0;
+    &-thin {
+      margin: 5px 0px;
+    }
+  }
+  &--top {
+    margin-top: 10px;
+    &-thin{
+      margin-top: 5px;
+    }
+  }
+  &--right {
+    margin-right: 10px;
+    &-thin {
+      margin-right: 5px;
+    }
+  }
+  &--bottom {
+    margin-bottom: 10px;
+    &-thin {
+      margin-bottom: 5px;
+    }
+  }
+  &--left {
+    margin-left: 10px;
+    &-thin{
+      margin-left: 5px;
+    }
+  }
+
+  &--medium {
+    margin: 0 15px;
+    &-all {
+      margin: 15px;
+    }
+    &-vertical {
+      margin: 15px 0;
+    }
+    &-horizontal {
+      margin: 0 15px;
+    }
+    &-top {
+      margin-top: 15px;
+    }
+    &-right {
+      margin-right: 15px;
+    }
+    &-bottom {
+      margin-bottom: 15px;
+    }
+    &-left {
+      margin-left: 15px;
+    }
+  }
+
+
+  &--auto {
+    margin: auto;
+
+    &-vertical {
+      margin: auto 0px;
+    }
+
+    &-horizontal {
+      margin: 0 auto;
+    }
+  }
+
+  &--small {
+    margin: 0 8px;
+    &-all {
+      margin: 8px;
+    }
+    &-vertical {
+      margin: 8px 0;
+    }
+    &-horizontal {
+      margin: 0 8px;
+    }
+    &-top {
+      margin-top: 8px;
+    }
+    &-right {
+      margin-right: 8px;
+    }
+    &-bottom {
+      margin-bottom: 8px;
+    }
+    &-left {
+      margin-left: 8px;
+    }
+  }
+
+  &--large {
+    margin: 0 20px;
+
+    &-all {
+      margin: 20px;
+    }
+
+    &-vertical {
+      margin: 20px 0;
+    }
+
+    &-top {
+      margin-top: 20px;
+    }
+
+    &-left {
+      margin-left: 20px;
+    }
+
+    &-right {
+      margin-right: 20px;
+    }
+
+    &-bottom {
+      margin-bottom: 20px;
+    }
+
+    &__auto {
+      &--vertical {
+        margin: auto 20px;
+      }
+
+      &--horizontal {
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+.u-d-table-cell {
+  display: table-cell;
+}
+
+.u-line-height-28 {
+  line-height: 28px;
+}
+
+
+.u-line-height-16 {
+  line-height: 16px;
+}
+
+// background color
+
+.u-orange-bg {
+  background-color: $orange;
+}
+
+.u-white-bg {
+  background-color: $white;
+}
+
+// border utilities
+
+.u-shaded-box {
+  @extend .u-round-corner;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px $grey_1;
+}
+
+.u-round-corner {
+  border-radius: $border-radius;
+}
+
+.u-border-grey-1 {
+  @extend .u-round-corner;
+  border: 1px solid $grey_1;
+
+  &--top {
+    border-top: 1px solid $grey_1;
+  }
+
+  &--bottom {
+    border-bottom: 1px solid $grey_1;
+  }
+
+  &--right {
+    border-right: 1px solid $grey_1;
+  }
+}
+
+.u-border {
+  
+  &-orange {
+    border: 1px solid $orange;
+  }
+}
+
+.u-v--hide {
+  visibility: hidden;
+}
+
+//text-overflow
+
+.u-t {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+}
+
+.u-plain-text {
+  text-decoration: none;
+}
+
+.u-t-ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.u-pos-rel {
+  position: relative;
+}
+
+.u-v-h-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.u-coverer{
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
+}
+
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
+//disabled css
+.u-disable {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+}
+
+// textboxes
+
+.u-textbox {
+  @extend .u-round-corner;
+  @extend .u-t-color--green;
+  border: solid 1px $grey_1;
+  padding: 0 8px;
+
+  &--error {
+    border: solid 1px $danger;
+  }
+}
+
+.u-mtextbox {
+  @extend .u-round-corner;
+  border: solid 1px $grey_1;
+  padding: 0 8px;
+}
