@@ -26,6 +26,8 @@ class EditNote extends React.Component {
           data: response.body.data && response.body.data[0],
           status: response.body.status
         });
+        document.getElementById('title').value = response.body.data && response.body.data[0].title
+        
         document.getElementById(contentId).innerHTML = decodeURI(response.body.data && response.body.data[0].content)
       }).catch(error => {
       })
@@ -63,7 +65,6 @@ class EditNote extends React.Component {
           type='text'
           name='title'
           id='title'
-          value={this.state.data.title || null}
           className='title'
         /><br/>
         <div
@@ -72,7 +73,6 @@ class EditNote extends React.Component {
           id={contentId}
           className='content'
         />
-        {/*<textarea rows="4" cols="50" name='content' id='content'></textarea><br/>*/}
         <div className='image-block'>
           <input type='text' id='editImage' className='image' />
           <button className='u-d-inline-block' onClick={this.uploadImage}>Upload</button>
