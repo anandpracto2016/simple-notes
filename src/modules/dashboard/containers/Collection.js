@@ -28,6 +28,11 @@ const dispatchToProps = (dispatch, ownProps) => {
         folderId: id
       }))
       dispatch(dashboardActions.fetchFolderDetails(id))
+    },
+    addFolder: () => {
+      dispatch(dashboardActions.updateModal({
+        currentModal: 'ADD_FOLDER'
+      }))
     }
   }
 }

@@ -40,3 +40,36 @@
 		}
 	}
 }
+
+.add-folder {
+	input {
+		border-radius: 5px;
+		border: 1px solid #a7a7a7;		
+		padding: 5px;
+	}
+	.name {
+		margin-bottom: 20px;
+		width: 100%;
+		border-radius: 5px;
+	}
+	.save-btn {
+		text-align: right;
+		button {
+			width: 150px;
+			height: 35px;
+		}
+	}
+}
+
+.c-dropdown-wrapper {
+	width: 30%;
+	margin-bottom: 15px;
+}
+
+.c-dropdown-select {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #b4b4be;
+}

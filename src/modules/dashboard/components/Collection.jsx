@@ -8,7 +8,7 @@ const Collection = props => {
   const foldersKey = Object.keys(folders);
 
   return (
-    <div>
+    <div className='u-cushion--all'>
       <div className='u-spacer--top'>
         <div className='u-bold'>Notes</div>
         <div className=''>
@@ -16,7 +16,10 @@ const Collection = props => {
         </div>
       </div>
       <div className=''>
-        <div className='u-bold u-spacer--top'>Folders</div>
+        <div className='u-spacer--top'>
+          <span className='u-bold '>Folders</span>
+          <span className='u-float--right u-bold c-plus-icon' onClick={props.addFolder} title='Add new folder'>&#x2b;</span>
+        </div>
         <div className=''>
           <FolderList items={folders} onClick={props.onFolderClick} onNoteClick={props.onNoteClick}/>          
         </div>      

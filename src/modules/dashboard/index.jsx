@@ -42,10 +42,7 @@ const mergeProps = (stateProps, dispatchProps, ownProps) => {
     ...stateProps,
     onAddNoteClick: () => {
       dispatch(actions.updateModal({
-        currentModal: 'ADD_NOTE',
-        data: {
-          foldersList: stateProps.foldersList
-        }
+        currentModal: 'ADD_NOTE'
       }))
     },
     onEditNoteClick: () => {

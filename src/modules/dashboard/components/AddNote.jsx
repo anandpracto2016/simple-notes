@@ -1,6 +1,6 @@
 import React from 'react';
 import request from 'superagent'
-import DropDown from './DropDown';
+import DropDown from '../containers/Dropdown';
 class AddNote extends React.Component {
   constructor() {
     super()
@@ -11,10 +11,19 @@ class AddNote extends React.Component {
     
     const title = document.getElementById('addTitle').value;
     const content = document.getElementById('addContent').innerHTML;
-    console.log(title, content);
+    const folderDropdown = document.getElementById('folderDropdown');
+    const folderId = folderDropdown.options[folderDropdown.selectedIndex].value;
+    console.log('Add note', title, content, folderId);
+    
+    if (!title && !content) {
+      window.alert('Please add title & content');
+      return;
+    }
+    
     const payload = {
       title,
-      content
+      content,
+      folder_id: folderId || null
     }
     request
       .post(`/api/v1/createNote/${window.userId}`)
@@ -34,7 +43,7 @@ class AddNote extends React.Component {
     return (
       <div className="add-note">
         <h4>Add New Note:</h4>
-        <DropDown options={this.props.foldersList}/>
+        <DropDown/>
         <input
           type='text'
           name='addTitle'

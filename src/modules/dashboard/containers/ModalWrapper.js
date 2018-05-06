@@ -2,8 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ModalWrapper from '../components/ModalWrapper';
 import {actions} from '../ducks/dashboard';
-import AddNote from '../containers/AddNote';
+import AddNote from '../components/AddNote';
 import EditNote from '../components/EditNote';
+import AddFolder from '../components/AddFolder';
 
 const ModalConductor = props => {
   switch (props.currentModal) {
@@ -13,12 +14,12 @@ const ModalConductor = props => {
           <AddNote {...props}/>
         </ModalWrapper>
       );
-    case 'SHARE_NOTE':
+    case 'ADD_FOLDER':
       return (
         <ModalWrapper {...props} position='center'>
-          <div>Share Link</div>
+          <AddFolder {...props}/>
         </ModalWrapper>
-      );
+      )
     case 'EDIT_NOTE':
       return (
         <ModalWrapper {...props} position='center'>

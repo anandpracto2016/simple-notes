@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import AddNote from '../components/AddNote';
+import Dropdown from '../components/DropDown';
 
 
 const getFoldersList = (folders) => {
@@ -21,7 +21,8 @@ const getFoldersList = (folders) => {
 const mapStateToProps = (state) => {
   const foldersList = getFoldersList(state.dashboard.folders);
   return {
-    foldersList
+    options: foldersList,
+    text: 'Choose a folder'
   }  
 }
 
@@ -30,4 +31,4 @@ const mapDispatchToProps = (dispatch) => {
   return {}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddNote);
+export default connect(mapStateToProps, mapDispatchToProps)(Dropdown);
