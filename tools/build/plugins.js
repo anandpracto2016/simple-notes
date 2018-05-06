@@ -46,7 +46,7 @@ let loaderOptions = (isProd) =>
 
 let uglifyJs = (isProd) =>
   isProd && new webpack.optimize.UglifyJsPlugin({
-    sourceMap: true,
+    sourceMap: false,
     compress: {
       drop_console: true,
       screw_ie8: true,

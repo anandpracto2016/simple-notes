@@ -11,7 +11,8 @@
     "build": "rm -rf build ; NODE_ENV=production node tools/build/index.js",
     "start:dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --config tools/build/webpack.config.js",
     "pm2-run": "NODE_ENV=development pm2 start ./pm2/pm2.dev.config.js --no-daemon",
-    "start": "sh ./tools/run-dev-server.sh"
+    "start": "sh ./tools/run-dev-server.sh",
+    "start:prod": "npm run build; node server/app.js"
   },
   "author": "Anand Gupta",
   "license": "ISC",
