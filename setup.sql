@@ -32,6 +32,7 @@ insert into notes values(1, 1, 1, 0, "", now(), now(), "note1", "content1");
 insert into notes values(2, 1, 1, 0, "", now(), now(), "note2", "content2");
 insert into notes values(3, 2, 1, 0, "", now(), now(), "note3", "content3");
 insert into notes values(4, null, 1, 0, "", now(), now(), "orphan note", "orphan content");
+insert into notes values(5, null, 1, 0, "", now(), now(), "Random Note", "Random content");
 
 create table user (
   id integer(10) AUTO_INCREMENT primary key,
@@ -41,8 +42,8 @@ create table user (
   priviledge enum("root", "user", "admin", "guest")
 );
 
-insert into user values(1, "Sunil", MD5("12345"), "sunil@gmail.com", "root");
-insert into user values(2, "Anand", MD5("12345"), "anand@gmail.com", "admin");
+insert into user values(1, "Anand", MD5("12345"), "anand@gmail.com", "admin");
+insert into user values(2, "Sunil", MD5("12345"), "sunil@gmail.com", "root");
 
 create table user_notes (
   id integer(10) AUTO_INCREMENT primary key,
@@ -56,8 +57,8 @@ create table user_notes (
 
 insert into user_notes values(1, 1, 1, 1, 1, 1);
 insert into user_notes values(2, 1, 2, 1, 1, 1);
-insert into user_notes values(3, 2, 3, 1, 1, 1);
-insert into user_notes values(4, 2, 4, 1, 1, 1);
+insert into user_notes values(3, 1, 3, 1, 1, 1);
+insert into user_notes values(4, 1, 4, 1, 1, 1);
 
 create table user_folders (
   id integer(10) AUTO_INCREMENT primary key,

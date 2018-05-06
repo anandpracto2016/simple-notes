@@ -8,7 +8,7 @@ import {actions} from '../dashboard/ducks/dashboard';
 
 const Dashboard = (props) => {
   return (
-    <div className='u-cushion--all u-overflow-hidden'>
+    <div className='u-cushion--all'>
       <Modals/>
       <div className='o-media'>
         <div className='o-media--left c-list-wrapper'>

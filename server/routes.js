@@ -48,8 +48,8 @@ router.get('/getFolderDetails/:user_id/:folder_id', function(req, res, next) {
   let folderId = req.params.folder_id;
   console.log(userId, folderId)
   db.get().query(`
-    Select * from notes where notes.folder_id = ? AND notes.folder_id = ? AND notes.folder_id in (Select folder_id from user_folders where id = ?)
-  `, [folderId, folderId, userId], function (err, rows) {
+    Select * from notes where notes.folder_id = ? AND notes.folder_id in (Select folder_id from user_folders where user_id = ?)
+  `, [folderId, userId], function (err, rows) {
     if (err){
       res.json({
         status: "FAILURE",
